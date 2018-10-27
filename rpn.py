@@ -19,12 +19,20 @@ def calculate(arg):
             elif token == '/':
                 result = val2 / val1
             stack.append(result)
-            return stack[0]
+
+    if len(stack) > 1:
+        raise ValueError('too many arguments on the stack')
+
+    return stack[0]
     pass
 
 def main():
     while True:
-       print(calculate(input('rpn calc> ')))
+        try:
+            result = calculate(input('rpn calc> '))
+            print(result)
+        except ValueError:
+            pass
 
 if __name__ == '__main__':
     main()

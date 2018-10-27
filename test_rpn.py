@@ -17,3 +17,7 @@ class TestBasics(unittest.TestCase):
     def test_div(self):
         result = rpn.calculate('9 3 /')
         self.assertEqual(3, result)
+
+    def test_toomany(self):
+        with self.assertRaises(ValueError):
+            result = rpn.calculate('1 2 3 +')
