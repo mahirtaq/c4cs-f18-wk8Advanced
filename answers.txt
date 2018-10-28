@@ -1,0 +1,6 @@
+Which coverage tool did you use and why?
+	I used Coverage because it was the first thing that popped
+	up on google when i searched "best coverage tools python"
+What did you have to do to get automatic integration working?
+	I ran coverage run test_rpn.py
+

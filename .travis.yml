@@ -2,9 +2,5 @@ language: python
 python:
         - "3.5"
         - "3.6"
-install: 
-        - pip3 install coveralls
 script:
         - python3 -m unittest
-after_success:
-        coveralls
