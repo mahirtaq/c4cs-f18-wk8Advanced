@@ -22,6 +22,6 @@ class TestBasics(unittest.TestCase):
         with self.assertRaises(ValueError):
             result = rpn.calculate('1 2 3 +')
 
-    def test_epo(self):
+    def test_expo(self):
         result = rpn.calculate('2 3 ^')
         self.assertEqual(8, result)

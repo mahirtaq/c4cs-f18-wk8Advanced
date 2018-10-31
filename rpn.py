@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 #skdslfjlkdfj
+import readline
+import colored, sys
+from colored import stylize_interactive, fg
 def calculate(arg):
     stack = []
     tokens = arg.split()
@@ -23,18 +26,17 @@ def calculate(arg):
             elif token == '%':
                 result = val2 % val1
             stack.append(result)
+            answer = colored.fg(10) + colored.attr("bold")
+            print(val2, stylize_interactive(token, colored.fg(164)), val1, '=', stylize_interactive(result, answer))
 
     if len(stack) > 1:
         raise ValueError('too many arguments on the stack')
-
-    return stack[0]
     pass
 
 def main():
     while True:
         try:
-            result = calculate(input('rpn calc> '))
-            print(result)
+            calculate(input('rpn calc> '))
         except ValueError:
             pass
 
