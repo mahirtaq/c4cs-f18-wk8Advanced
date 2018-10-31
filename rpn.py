@@ -29,9 +29,11 @@ def calculate(arg):
             answer = colored.fg(10) + colored.attr("bold")
             print(val2, stylize_interactive(token, colored.fg(164)), val1, '=', stylize_interactive(result, answer))
 
+
     if len(stack) > 1:
         raise ValueError('too many arguments on the stack')
-    pass
+
+    return stack[0]
 
 def main():
     while True:
